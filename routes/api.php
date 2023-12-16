@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix("v1")->group(function () {
-    Route::apiResource("hewan", HewanController::class);
     Route::post('/auth/register', [AuthController::class, 'createUser']);
     Route::post('/auth/login', [AuthController::class, 'loginUser']);
+    Route::apiResource("hewan", HewanController::class);
 });
